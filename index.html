@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Photography Form</title>
   </head>
@@ -10,29 +15,36 @@
     <header>
       <h1 id="title">Book a Photoshoot</h1>
       <p id="description">Please fill out this form to schedule a shoot</p>
+    </header>
+    <main>
       <form id="survey-form">
-        <div class="form-group">
+        <div class="form-group first-input">
           <label id="name-label" for="name">Name:</label>
+          <br />
           <input
             type="text"
             id="name"
             autocomplete="off"
             required
             placeholder="Please enter you name."
+            class="text-input"
           />
         </div>
         <div class="form-group">
           <label id="email-label" for="email">Email:</label>
+          <br />
           <input
             type="email"
             id="email"
             autocomplete="off"
             required
             placeholder="Please enter you email."
+            class="text-input"
           />
         </div>
         <div class="form-group">
           <label id="number-label" for="number">Locations</label>
+          <br />
           <input
             type="number"
             id="number"
@@ -41,67 +53,83 @@
             max="10"
             required
             placeholder="Please enter the amount of locations (1-10)."
+            class="text-input"
           />
         </div>
         <div class="form-group">
           <label id="dropdown" for="package">Photoshoot Package</label>
+          <br />
           <select id="dropdown" name="package">
+            <option disabled selected value>Select Package</option>
             <option value="1">1 Shoot</option>
             <option value="4">4 Shoots</option>
             <option value="12">12 Shoots</option>
           </select>
         </div>
         <div class="form-group">
-          <p>What is your preferance on the time of shoot?</p>
-
-          <input type="radio" id="sunrise" value="sunrise" name="time" />
-          <label for="sunrise">Sunrise</label>
-          <br />
-          <input type="radio" id="sunset" value="sunset" name="time" />
-          <label for="sunset">Sunset</label>
+          <p class="question-text">
+            What is your preferance on the time of shoot?
+          </p>
+          <div class="check-div">
+            <input type="radio" id="sunrise" value="sunrise" name="time" />
+            <label for="sunrise">Sunrise</label>
+          </div>
+          <div class="check-div">
+            <input type="radio" id="sunset" value="sunset" name="time" />
+            <label for="sunset">Sunset</label>
+          </div>
         </div>
         <div class="form-group">
-          <p>
+          <p class="question-text">
             What do you want photos for?
             <span class="check">Check all that apply</span>
           </p>
-          <input
-            type="checkbox"
-            id="memories"
-            name="photos-for"
-            value="memories"
-          />
-          <label for="memories"> Memories</label><br />
-          <input
-            type="checkbox"
-            id="portfolio"
-            name="photos-for"
-            value="portfolio"
-          />
-          <label for="portfolio">Portfolio</label><br />
-          <input
-            type="checkbox"
-            id="marketing"
-            name="photos-for"
-            value="marketing"
-          />
-          <label for="marketing"> Marketing</label><br />
-          <input type="checkbox" id="other" name="photos-for" value="other" />
-          <label for="other"> Other</label><br />
+          <div class="check-div">
+            <input
+              type="checkbox"
+              id="memories"
+              name="photos-for"
+              value="memories"
+            />
+            <label for="memories"> Memories</label>
+          </div>
+          <div class="check-div">
+            <input
+              type="checkbox"
+              id="portfolio"
+              name="photos-for"
+              value="portfolio"
+            />
+            <label for="portfolio">Portfolio</label>
+          </div>
+          <div class="check-div">
+            <input
+              type="checkbox"
+              id="marketing"
+              name="photos-for"
+              value="marketing"
+            />
+            <label for="marketing"> Marketing</label>
+          </div>
+          <div class="check-div">
+            <input type="checkbox" id="other" name="photos-for" value="other" />
+            <label for="other"> Other</label>
+          </div>
         </div>
         <div class="form-group">
           <label for="comments">Any additional information?</label><br />
           <textarea
+            class="text-input"
             id="comments"
             name="comments"
             placeholder="Please enter any additional information you would like me to know for the photoshoot"
           ></textarea>
-          <div class="form-group">
-            <input type="submit" value="Submit" id="submit" />
-          </div>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit" id="submit" />
         </div>
       </form>
-    </header>
+    </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
