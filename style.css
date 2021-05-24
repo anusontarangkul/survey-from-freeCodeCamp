@@ -3,6 +3,10 @@
   font-size: 24px;
 }
 
+body {
+  background-color: bisque;
+}
+
 header {
   text-align: center;
 }
@@ -10,6 +14,7 @@ header {
 header h1 {
   font-size: 60px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 header p {
@@ -18,12 +23,18 @@ header p {
 }
 
 #survey-form {
-  background-color: aqua;
+  background-color: #3ce0f6;
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 100px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 5px;
 }
 
+#survey-form p {
+  font-size: 24px;
+}
 .form-group {
   margin-top: 20px;
   margin-left: 20px;
@@ -38,16 +49,18 @@ header p {
   width: 90%;
   padding: 5px;
 }
-
 #submit {
   padding: 7px;
   width: 100px;
 }
 
-#dropdown {
+#dropdown-select {
   margin-top: 10px;
-  padding: 5px;
+  font-size: 16px;
+  height: 40px;
   width: 230px;
+  padding-left: 3px;
+  color: #6d7273;
 }
 
 .question-text {
@@ -56,6 +69,10 @@ header p {
 
 .check-div {
   margin-bottom: 2px;
+}
+
+.check-div label {
+  font-size: 20px;
 }
 
 input[type='radio'] {
@@ -68,4 +85,13 @@ input[type='checkbox'] {
   -ms-transform: scale(1.2); /* IE 9 */
   -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
   transform: scale(1.2);
+}
+
+::placeholder {
+  font-size: 16px;
+  color: #6d7273;
+}
+
+.check {
+  font-size: 20px;
 }

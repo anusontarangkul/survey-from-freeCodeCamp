@@ -43,7 +43,7 @@
           />
         </div>
         <div class="form-group">
-          <label id="number-label" for="number">Locations</label>
+          <label id="number-label" for="number">Number of Locations:</label>
           <br />
           <input
             type="number"
@@ -57,10 +57,12 @@
           />
         </div>
         <div class="form-group">
-          <label id="dropdown" for="package">Photoshoot Package</label>
+          <label id="dropdown" for="package">Photoshoot Package:</label>
           <br />
-          <select id="dropdown" name="package">
-            <option disabled selected value>Select Package</option>
+          <select id="dropdown-select" name="package">
+            <option disabled selected value id="select-package">
+              Select Package
+            </option>
             <option value="1">1 Shoot</option>
             <option value="4">4 Shoots</option>
             <option value="12">12 Shoots</option>
@@ -82,7 +84,7 @@
         <div class="form-group">
           <p class="question-text">
             What do you want photos for?
-            <span class="check">Check all that apply</span>
+            <span class="check">(Check all that apply)</span>
           </p>
           <div class="check-div">
             <input
@@ -122,7 +124,7 @@
             class="text-input"
             id="comments"
             name="comments"
-            placeholder="Please enter any additional information you would like me to know for the photoshoot"
+            placeholder="Please enter any additional information you would like me to know for the photoshoot."
           ></textarea>
         </div>
         <div class="form-group">
